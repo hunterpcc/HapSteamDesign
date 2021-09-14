@@ -1,0 +1,184 @@
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.178);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    overflow: auto;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__exit {
+        z-index: 9999;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close {
+        border-radius: 1rem;
+        padding: 2rem;
+        text-decoration: none;
+
+        &:hover {
+            background-color: lighten($color-secondary, 85%);
+        }
+    }
+
+    &__icon {
+        width: 2.15rem;
+        height: 2.15rem;
+        fill: $color-secondary;
+    }
+
+    &__card {
+        border-radius: 1rem;
+        padding: 3rem;
+        background-color: $color-white;
+        
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        width: 80rem;
+        flex: 0 0 75%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__hero {
+        overflow: hidden;
+        width: 50%;
+        height: 25rem;
+        flex: 0 0 45%;
+        
+        margin-right: 2.5rem;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        display: block;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        &-name {
+            font-size: 2.5rem;
+        }
+
+        &-price {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        &-desc {
+            font-size: 1.45rem;
+            font-weight: 400;
+        }
+
+        &-ins {
+            margin-top: 1.15rem;
+        }
+
+        &-msg {
+            font-size: 1.75rem;
+            margin-bottom: 5px;
+        }
+
+        &-area {
+            border-radius: 1rem;
+            border: 1px solid #ccc;
+            padding: 8px;
+            outline: none;
+            font-family: inherit;
+            color: inherit;
+            font-size: 1.4rem;
+            width: 100%;
+            height: 7rem;
+            resize: none;
+        }
+    }
+
+    &__actions {
+        margin-top: 4rem;
+        flex: 1;
+
+        display: flex;
+    }
+
+    &__purchase,
+    &__form {
+        width: 100%;
+        display: flex;
+
+        &-left {
+            margin-right: auto;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__quantity {
+        border-radius: 1rem;
+        outline: none;
+        border: 1px solid #ccc;
+        background-color: $color-white;
+        padding: 2rem;
+        width: 5rem;
+        font-size: 1.5rem;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+        
+        &-num {
+            text-align: center;
+            width: 8rem;
+        }
+
+        &-minus,
+        &-plus {
+            cursor: pointer;
+            &:hover {
+                background-color: lighten($color-secondary, 85%);
+            }
+        }
+    }
+
+    &__total {
+        margin-right: 2rem;
+        font-weight: 500;
+        font-size: 1.75rem;
+    }
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  appearance: none;
+  margin: 0; 
+}

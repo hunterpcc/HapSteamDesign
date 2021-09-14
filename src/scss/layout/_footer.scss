@@ -1,0 +1,110 @@
+.footer {
+    padding: 8rem 0;
+    background-color: $color-secondary;
+
+    // TEMP
+    color: $color-white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 92%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+        // INFO PART
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__nav {
+        margin: 1.5rem 0 3.5rem 0;
+    }
+
+    &__copyr {
+        font-size: 1.15rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__about {
+        margin-left: 2rem;
+    }
+
+    // CONTACT PART
+
+    &__contact {
+
+
+        &-container {
+            display: flex;
+            align-items: center;
+            
+            &:not(:last-child) {
+                margin-bottom: 2.95rem;
+            }
+        }
+
+        &-text {
+            text-decoration: none;
+            color: $color-white;
+            font-size: 1.35rem;
+            font-weight: 500;
+
+            &-link {
+                //color: $color-primary;
+                font-weight: 600;
+                border-bottom: 1px solid $color-white;
+
+                transition: all 0.4s;
+
+                &:hover,
+                &:active {
+                    color: $color-primary;
+                    border-bottom: 1px solid $color-primary;
+                }
+            }
+        }
+
+        &-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: $color-white;
+            margin-right: 2rem;
+        }
+    }
+
+    // SOCIALS PART
+
+    &__socials {
+        list-style: none;
+
+        display: flex;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+
+        &-icon {
+            width: 2.85rem;
+            height: 2.85rem;
+            fill: $color-white;
+
+            transition: all 0.4s;
+
+            &:hover,
+            &:active {
+                fill: $color-primary;
+            }
+        }
+    }
+}

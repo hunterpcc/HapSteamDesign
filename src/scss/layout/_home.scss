@@ -1,0 +1,103 @@
+.home {
+    height: 100vh;
+    width: 100%;
+
+    background-color: $color-white;
+
+
+    //background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.342)), url("https://img.pixers.pics/download(s3:700/FO/17/85/10/94/5/700_FO178510945_e46271da04a2c3011ba48c0b7600cdce.jpg):pattern(0.2381w,0.2381h):resize(700,700):compose(download(cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png),over,480,650):format(jpg)/wallpapers-retro-brown-watercolor-texture-grunge-seamless-background-oriental-chinese-scale-curve-frame.jpg.jpg") no-repeat;
+
+    //background-position: center;
+    //background-size: cover;
+
+
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        height: 100vh;
+        width: 92%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__gallery,
+    &__data {
+        display: flex;
+    }
+
+    &__gallery {
+        flex: 0 0 40%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        &-container {
+            overflow: hidden;
+            margin-top: 10rem;
+            width: 100%;
+            height: 60%;
+        }
+
+        &-img {
+            width: 100%;
+            display: block;
+        }
+
+        &-icon {
+            fill: $color-white;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .glide__arrow {
+            padding: 2px 5px;
+            border-radius: 10%;
+        }
+    }
+
+    &__data {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card {
+        margin-top: 7rem;
+        padding:5rem;
+        width: 65%;
+    }
+
+    &__welcome {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__btns {
+        margin-top: 2rem;
+    }
+
+    // HOURS CARD
+
+    &__hours {
+        background-color: $color-primary;
+        width: 60%;
+        border-radius: 3px;
+        padding: 4rem 2rem;
+
+        &-h3 {
+            color: $color-white;
+            font-size: 2.25rem;
+        }
+
+        &-p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: $color-white;
+        }
+    }
+}

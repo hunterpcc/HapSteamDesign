@@ -1,0 +1,170 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-white;
+   // background-color: transparent;
+    
+    width: 100%;
+    position: fixed;
+
+    z-index: 9999;
+
+
+    &__nav {
+        width: 92%;
+        display: flex;
+        padding: 1.75rem 0;
+    }
+
+    &__list {
+        margin-right: auto;
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 1rem;
+        width: 7rem;
+        border-radius: 50%;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4.5rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-secondary;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+
+        border-bottom: 2px solid transparent;
+
+        transition: all .4s;
+
+        &:hover,
+        &:active {
+            border-bottom: 2px solid $color-primary;
+        }
+    }
+
+    &__link--footer {
+        color: $color-white !important;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        &-cart {
+            border-radius: 50rem;
+            text-decoration: none;
+            padding: 1.5rem 2rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: lighten($color-secondary, 85%);
+            }
+        }
+
+        &-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: $color-secondary;
+        }
+
+        &-text {
+            margin-left: 5px;
+            font-size: 1.55rem;
+            font-weight: 400;
+            color: $color-secondary;
+        }
+
+        &-itemnum {
+            margin-left: 5px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: $color-white;
+            font-weight: 700;
+            width: 2.35rem;
+            height: 2.35rem;
+
+            position: relative;
+
+        }
+
+        // Centers number perfectly in the center
+        // Use instead of flexbox
+        &-num {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
+    &__menu {
+        background-color: $color-secondary;
+        z-index: 9999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-nav {
+            width: 65%;
+        }
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        &-link:link,
+        &-link:visited {
+            color: $color-white;
+
+            width: 100%;
+            padding: 3rem 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 600;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-bottom: 2px solid transparent;
+
+            transition: all .2s;
+
+            &:hover,
+            &:active {
+                border-bottom: 2px solid $color-primary;
+                color: $color-primary;
+            }
+
+        }
+    }
+}

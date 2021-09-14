@@ -1,0 +1,11 @@
+.util-h1-margin {
+    margin-bottom: 2rem;
+
+    &:after {
+        content: " ";
+        width: 23.5%;
+        height: 4px;
+        display: block;
+        background-color: #c0392b;
+    }
+}

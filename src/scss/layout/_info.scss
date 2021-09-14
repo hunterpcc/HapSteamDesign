@@ -1,0 +1,109 @@
+.info {
+    padding: 10rem 0;
+    
+    background-color: $color-white;
+
+    //background-image: url('../img/gallery10.jpg');
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transform: skewY(-2deg);
+    //backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 92%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        backface-visibility: hidden;
+        transform: skewY(2deg);
+    }
+
+    &__bottom {
+        margin-top: 4rem;
+        width: 65%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__gallery {
+        margin-top: 3rem;
+        flex: 1;
+        width: 100%;
+
+        // CSS GRID GALLERY
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        gap: 2rem;
+
+        &-img {
+            width: 100%;
+            overflow: hidden;
+            object-fit: cover;
+
+            &--1 {
+                grid-column: -1 / 1;   
+            }
+
+            &--2 {
+                height: 11rem;
+                grid-column: -3 / -2;
+            }
+            &--3 {
+                height: 11rem;
+                grid-column: -2 / -1;
+            }
+        }
+    }
+
+    &__cards {
+        flex: 0 0 70%;
+        margin-left: 5rem;
+    }
+
+    &__card {
+        width: 100%;
+
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+
+        &-btn {
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__list {
+        margin-top: 1rem;
+        list-style:none;
+    }
+
+    &__time {
+        font-size: 1.65rem;
+        font-weight: 400;
+        //color: $color-white;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &-hh {
+            font-size: 1.45rem;
+            //color: lighten($color-white, 20%);
+        }
+    }
+
+    &__p {
+        margin-top: 1rem;
+        font-size: 1.65rem;
+        font-weight: 400;
+        //color: $color-white;
+    }
+}
